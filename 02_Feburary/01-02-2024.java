@@ -1,3 +1,11 @@
+/*
+Date : 01/02/2024
+Problem : Divide Array Into Arrays With Max Difference
+Difficulty : Medium
+Problem Link : https://leetcode.com/problems/divide-array-into-arrays-with-max-difference/description/
+
+*/
+
 import java.util.Arrays;
 class Solution {
     public int[][] divideArray(int[] nums, int k) {
