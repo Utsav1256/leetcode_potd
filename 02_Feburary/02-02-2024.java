@@ -10,24 +10,24 @@ import java.util.List;
 
 class Solution {
     public List<Integer> sequentialDigits(int low, int high) {
-        List<Integer> Ans = new ArrayList<>();
-        for (int start = 1; start < 10; start++) {
-            int value = start;
+        List<Integer> result = new ArrayList();
 
-            if(value >= low && value <= high) {
-                Ans.add(value);
+        for(int startingDigit = 1; startingDigit < 10; startingDigit++) {
+            int number = startingDigit;
+
+            if(number >= low && number <= high) {
+                result.add(number);
             }
 
-            for(int current = start + 1; current < 10; current++) {
-                value = value * 10;
-                value = value + current;
+            for(int nextDigit = startingDigit + 1; nextDigit < 10; nextDigit++) {
+                number = (number * 10) + nextDigit;
 
-                if(value >= low && value <= high) {
-                    Ans.add(value);
+                if(number >= low && number <= high) {
+                    result.add(number);
                 }
             }
         }
-        Collections.sort(Ans);
-        return Ans;
+        Collections.sort(result);
+        return result;
     }
 }
